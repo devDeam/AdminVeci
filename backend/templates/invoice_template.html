@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Factura</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+  }
+  .invoice-box {
+    background: white;
+    border: 1px solid #eee;
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+  }
+  h1 {
+    color: #4CAF50;
+  }
+  table {
+    width: 100%;
+    line-height: inherit;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  table td {
+    padding: 5px;
+    vertical-align: top;
+  }
+  table tr.heading td {
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+  }
+  table tr.item td {
+    border-bottom: 1px solid #eee;
+  }
+  .footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="invoice-box">
+    <h1>Factura de Pago</h1>
+    <p>Hola {{tenant_name}},</p>
+    <p>Se ha registrado tu pago a la administraci&oacute;n del edificio.</p>
+
+    <table>
+      <tr class="heading">
+        <td>Detalle</td>
+        <td>Información</td>
+      </tr>
+      <tr class="item">
+        <td>ID de factura</td>
+        <td>{{invoice_id}}</td>
+      </tr>
+      <tr class="item">
+        <td>Apartamento</td>
+        <td>{{tenant_apt}}</td>
+      </tr>
+      <tr class="item">
+        <td>Número de documento</td>
+        <td>{{tenant_document}}</td>
+      </tr>
+      <tr class="item">
+        <td>Saldo anterior</td>
+        <td>${{previous_balance}}</td>
+      </tr>
+      <tr class="item">
+        <td>Pago realizado</td>
+        <td>${{payment_amount}}</td>
+      </tr>
+      <tr class="item">
+        <td>Nuevo saldo</td>
+        <td>${{new_balance}}</td>
+      </tr>
+      <tr class="item">
+        <td>Fecha</td>
+        <td>{{date}}</td>
+      </tr>
+    </table>
+
+    <p>Gracias por mantenerte al día.</p>
+    <p>Atentamente,<br/>Administración Altos de Cevillar</p>
+  </div>
+  <div class="footer">
+    © 2025 Daniel Almanza. Todos los derechos reservados.
+  </div>
+</body>
+</html>
