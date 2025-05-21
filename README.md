@@ -19,23 +19,23 @@ AdminVeci/
 │   ├── main.py              # Punto de entrada de FastAPI
 │   └── db/
 │       ├── database.py      # Conexión a MongoDB
-│       ├── init_db.py       # Inicialización
+│       ├── init_db.py       # Inicialización de la DB
 │       └── models/          # Modelos Pydantic
 │           ├── tenant.py
 │           ├── user.py
 │           └── payments.py
 ├── frontend/
-│   ├── main.py              # Lanzador de la GUI
+│   ├── main.py              # Inicia la GUI
 │   ├── api_client/
 │   │   └── tenant_client.py # Cliente HTTP para consumir la API
-│   └── gui/                 # Interfaz gráfica con Tkinter o PyQt
+│   └── gui/                 # Interfaz gráfica con Tkinter
 │       ├── login_view.py
 │       ├── main_admin_view.py
 │       ├── main_worker_view.py
 │       ├── tenant_form.py
 │       ├── tenant_modals.py
 ├── requirements.txt
-├── .env                     # Variables de entorno (no compartir)
+├── .env                     # Variables de entorno
 └── .gitignore
 ```
 
