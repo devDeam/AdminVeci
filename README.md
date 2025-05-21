@@ -59,7 +59,8 @@ pip install -r requirements.txt
 ```
 
 4. Crea un archivo `.env` con tus variables de conexión a MongoDB y configuración SMTP (correo electrónico).
-```MONGO_URI="mongodb+srv://<db_username>:<db_password>@proyectofinal-6315.87hywsi.mongodb.net/?retryWrites=true&w=majority&appName=ProyectoFinal-6315"
+```
+MONGO_URI="mongodb+srv://<db_username>:<db_password>@proyectofinal-6315.87hywsi.mongodb.net/?retryWrites=true&w=majority&appName=ProyectoFinal-6315"
 DB_NAME="ProyectoFinal"
 SMTP_SERVER="smtp.gmail.com"
 SMTP_PORT=587
